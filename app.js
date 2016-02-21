@@ -4,7 +4,7 @@
  var ejs = require('ejs');
  var app = express();
  
-//  mongoose.connect('mongodb://169.45.106.140/beacon-test'); //this may not work you goober
+ mongoose.connect('mongodb://169.45.106.140/beacon-test'); //this may not work you goober
  
  app.use(express.static('./client'));
  app.use(bodyParser.json());
