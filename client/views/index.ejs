@@ -11,6 +11,7 @@
     <script src="assets/js/angular-directive.min.js"></script>
     <script type="text/javascript" src="myapp.js"></script>
     <script type="text/javascript" src="controllers/beacon.js"></script>
+    <script type="text/javascript" src="controllers/map.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
@@ -26,25 +27,25 @@
         <button>Join us</button>
     </section>
         
-    <section class="map-toggle">
+    <section ng-controller="indexController" class="map-toggle">
         <button class="map-relieved">
             <ul>
               <li>Relieved Beacons</li>
-              <li>99999</li> <!-- UPDATE REAL-TIME FROM DB PLEASE -->
+              <li>{{relieved}}</li>
               <li>people feel better</li>
             </ul>
         </button>
-        <button class="map-distressed">
+        <button  class="map-distressed">
             <ul>
               <li>Distress Beacons</li>
-              <li>99999</li> <!-- UPDATE REAL-TIME FROM DB PLEASE -->
+              <li>{{distress}}</li>
               <li>people need support</li>
             </ul>
         </button>
         <button class="map-support">
             <ul>
                <li>Support Beacons</li>
-               <li>99999</li> <!-- UPDATE REAL-TIME FROM DB PLEASE -->
+               <li>{{support}}</li>
                <li>people have showed support</li>
             </ul>
         </button>
@@ -57,9 +58,11 @@
         
     <div ng-view></div>
     
-    <section class="live-feed">
+    <section class="live-feed" ng-controller="feedController">
         <p>Send support by clicking on the distress beacons on the map or in the live-feed.</p>
-        <p>one person feels distressed from USA <i>30mins ago</i></p> <!-- UPDATE REAL-TIME FROM DB PLEASE -->
+        <div ng-repeat="feed in feeds">
+        one person feels distressed from {{feed.country}} <i>{{feed.time_ago}} ago</i><br />
+        </div>
     </section>
     
     <footer class="global-footer">

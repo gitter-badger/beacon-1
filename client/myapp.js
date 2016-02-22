@@ -15,3 +15,14 @@ app.config(function($routeProvider){
             controller: 'beaconController'
         });
 });
+
+app.controller("indexController", function($scope) {
+    $scope.relieved = '109,738';
+    $scope.distress = '2,029';
+    $scope.support = '158,103';
+});
+
+
+app.controller("feedController", function($scope) {
+    $scope.feeds = [{country: "USA", time_ago:"30 minutes"}, {country: "Malaysia", time_ago:"1 hour"}, {country: "Lesotho", time_ago:"1 hour"}]
+});
