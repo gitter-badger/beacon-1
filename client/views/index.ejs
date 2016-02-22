@@ -10,11 +10,66 @@
     <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
     <script src="assets/js/angular-directive.min.js"></script>
     <script type="text/javascript" src="myapp.js"></script>
-    <script type="text/javascript" src="controllers/map.js"></script>
     <script type="text/javascript" src="controllers/beacon.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
+  <header class="home-header">
+    <h1>Beacon</h1>
+      <button>Log In</button><button>Sign Up</button>
+    </header>
+    
+    <section class="hero-message">
+        <h2>You'll never have to be alone again</h2>
+        <p>We will light a beacon in your darkest days and show solidarity when you need us most.
+        Give and get support anonymously.</p>
+        <button>Join us</button>
+    </section>
+        
+    <section class="map-toggle">
+        <button class="map-relieved">
+            <ul>
+              <li>Relieved Beacons</li>
+              <li>99999</li> <!-- UPDATE REAL-TIME FROM DB PLEASE -->
+              <li>people feel better</li>
+            </ul>
+        </button>
+        <button class="map-distressed">
+            <ul>
+              <li>Distress Beacons</li>
+              <li>99999</li> <!-- UPDATE REAL-TIME FROM DB PLEASE -->
+              <li>people need support</li>
+            </ul>
+        </button>
+        <button class="map-support">
+            <ul>
+               <li>Support Beacons</li>
+               <li>99999</li> <!-- UPDATE REAL-TIME FROM DB PLEASE -->
+               <li>people have showed support</li>
+            </ul>
+        </button>
+    </section>
+    
+    <section>
+        <h2>Are you feeling down?</h2>
+        <p>Place a distress beacon on the map from your location and receive support from others!</p>
+    </section>
+        
     <div ng-view></div>
+    
+    <section class="live-feed">
+        <p>Send support by clicking on the distress beacons on the map or in the live-feed.</p>
+        <p>one person feels distressed from USA <i>30mins ago</i></p> <!-- UPDATE REAL-TIME FROM DB PLEASE -->
+    </section>
+    
+    <footer class="global-footer">
+        <ul>
+          <li><a ng-href="">About</a></li>
+          <li><a ng-href="">FAQ</a></li>
+          <li><a ng-href="">Help</a></li>
+        </ul>
+        
+        <p><small>Made with care by Team Sheepdocs</small></p>
+    </footer>
 </body>
 </html>

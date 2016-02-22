@@ -1,10 +1,9 @@
 app.controller("mapController", function($scope) {
     angular.extend($scope, {
-        london: {
+        home: {
             lat: 51.505,
             lng: -0.09,
             zoom: 8,
-            mapid: mapbox.dark
         },
         events: {}
     });
@@ -13,7 +12,6 @@ app.controller("mapController", function($scope) {
 
     $scope.$on("leafletDirectiveMap.click", function(event, args){
         var leafEvent = args.leafletEvent;
-        console.log(leafEvent);
         $scope.markers.push({
             lat: leafEvent.latlng.lat,
             lng: leafEvent.latlng.lng,
