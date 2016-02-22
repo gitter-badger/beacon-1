@@ -1,9 +1,10 @@
-app.controller("mapController", [ "$scope", function($scope) {
+app.controller("mapController", function($scope) {
     angular.extend($scope, {
         london: {
             lat: 51.505,
             lng: -0.09,
-            zoom: 8
+            zoom: 8,
+            mapid: mapbox.dark
         },
         events: {}
     });
@@ -19,4 +20,4 @@ app.controller("mapController", [ "$scope", function($scope) {
             message: "My Added Marker"
         });
     });
-} ]);
+});

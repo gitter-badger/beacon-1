@@ -9,5 +9,9 @@ app.config(function($routeProvider){
         .when('/map', {
             templateUrl: 'views/partials/map.ejs',
             controller: 'mapController'
+        })
+        .when('/beacon', {
+            templateUrl: 'views/partials/beacon.ejs',
+            controller: 'beaconController'
         });
 });
